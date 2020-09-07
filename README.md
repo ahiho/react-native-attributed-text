@@ -2,6 +2,8 @@
 
 It's easy to style the nested text in React Native.
 
+![Ahiho Attributed Text](./docs/images/ahiho-attributed-text.png "Ahiho Attributed Text")
+
 ## Installation
 
 ```sh
@@ -38,7 +40,7 @@ import AttributedText from "@ahiho/react-native-attributed-text";
 </AttributedText>
 ```
 
-Let's check the example for more advance used with i18n translation.
+Let's check the [example](https://github.com/ahiho/react-native-attributed-text/tree/master/example) for more advance used with i18n translation.
 
 ## Contributing
 
