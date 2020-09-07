@@ -1,22 +1,44 @@
 # @ahiho/react-native-attributed-text
 
-React Native Attributed Text
+It's easy to style the nested text in React Native.
 
 ## Installation
 
 ```sh
+# Yarn
+yarn add @ahiho/react-native-attributed-text
+# NPM
 npm install @ahiho/react-native-attributed-text
 ```
 
 ## Usage
 
 ```js
-import ReactNativeAttributedText from "@ahiho/react-native-attributed-text";
+import AttributedText from "@ahiho/react-native-attributed-text";
 
 // ...
 
-const result = await ReactNativeAttributedText.multiply(3, 7);
+<AttributedText
+  style={{
+    textAlign: 'center',
+  }}
+  annotationProps={{
+    link: {
+      style: {
+        fontWeight: 'bold',
+        color: 'orange',
+      },
+      onPress: () => {
+        console.log('Welcome to Ahiho! Visit https://ahiho.com')
+      },
+    },
+  }}
+>
+  Welcome to [[link]:[Ahiho!]]
+</AttributedText>
 ```
+
+Let's check the example for more advance used with i18n translation.
 
 ## Contributing
 

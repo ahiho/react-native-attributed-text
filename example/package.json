@@ -9,7 +9,9 @@
     "start": "react-native start"
   },
   "dependencies": {
+    "i18next": "^19.7.0",
     "react": "16.11.0",
+    "react-i18next": "^11.7.2",
     "react-native": "0.62.2"
   },
   "devDependencies": {
