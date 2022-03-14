@@ -74,7 +74,7 @@ const AttributedText = ({
     }
     const tokenProps = annotationProps && annotationProps[token.annotation];
     return (
-      <Text {...tokenProps} key={index}>
+      <Text {...tokenProps} onPress={() => tokenProps.onPress(token.content)} key={index}>
         {token.content}
       </Text>
     );
