@@ -6,6 +6,7 @@ import {
   Text,
   View,
   StyleSheet,
+  GestureResponderEvent,
 } from 'react-native';
 
 const useStyles = () => {
@@ -74,7 +75,13 @@ const AttributedText = ({
     }
     const tokenProps = annotationProps && annotationProps[token.annotation];
     return (
-      <Text {...tokenProps} key={index}>
+      <Text
+        {...tokenProps}
+        onPress={(event: GestureResponderEvent) =>
+          tokenProps.onPress({ ...event, content: token.content })
+        }
+        key={index}
+      >
         {token.content}
       </Text>
     );
