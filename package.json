@@ -1,6 +1,6 @@
 {
   "name": "@ahiho/react-native-attributed-text",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "React Native Attributed Text",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
