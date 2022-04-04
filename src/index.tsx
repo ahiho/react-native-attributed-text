@@ -24,7 +24,9 @@ interface TokenProps {
 
 interface AttributedTextProps extends TextProps {
   annotationProps?: {
-    [key: string]: TextProps;
+    [key: string]: TextProps & {
+      onPress: (event: GestureResponderEvent & { content: string }) => void;
+    };
   };
   children: string;
 
@@ -77,9 +79,10 @@ const AttributedText = ({
     return (
       <Text
         {...tokenProps}
-        onPress={(event: GestureResponderEvent) =>
-          tokenProps.onPress({ ...event, content: token.content })
-        }
+        onPress={(event: GestureResponderEvent) => {
+          tokenProps?.onPress &&
+            tokenProps.onPress({ ...event, content: token.content });
+        }}
         key={index}
       >
         {token.content}
